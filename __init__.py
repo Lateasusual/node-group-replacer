@@ -4,10 +4,10 @@ bl_info = {
     "name": "node-group-replacer",
     "description": "Simple addon to mass replace node groups",
     "author": "Lateasusual",
-    "version": (1, 0, 0),
+    "version": (1, 0, 1),
     "blender": (2, 80, 0),
     "location": "Node Editor",
-    "category": "Nodes"
+    "category": "Node"
 }
 
 
@@ -35,8 +35,8 @@ class NODE_OT_ReplaceNodeTree(bpy.types.Operator):
     bl_label = "Replace Node Group"
     bl_options = {'REGISTER', 'UNDO'}
 
-    old_tree: bpy.props.StringProperty("old group")
-    new_tree: bpy.props.StringProperty("new group")
+    old_tree: bpy.props.StringProperty("Old group")
+    new_tree: bpy.props.StringProperty("New group")
 
     @classmethod
     def poll(cls, context):
